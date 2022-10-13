@@ -4,7 +4,6 @@
 #include "Weapon.h"
 #include "GameManager.h"
 
-// Update config
 int main()
 {
     std::string name;
