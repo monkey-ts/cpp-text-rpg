@@ -19,7 +19,7 @@ int main()
     /* Game Start Message End */
 
     std::cout << "What is your name?\n> ";
-    std::cin >> name;
+    std::getline(std::cin, name);
     hero.setName(name);
 
     std::cout << "Very well, " << hero.getName() << ". Let's get started!" << std::endl;
