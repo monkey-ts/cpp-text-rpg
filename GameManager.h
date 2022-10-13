@@ -36,17 +36,17 @@ public:
 	bool playerInBounds(int xy, char pos);
 	bool playerInBounds(int &x, int &y);
 
-	void setPlayerX(int x) {
-		if (playerInBounds(x, 'x')) px = x;
+	void movePlayerX(int x) {
+		if (playerInBounds(px+x, 'x')) px += x;
 	}
 
-	void setPlayerY(int y) {
-		if (playerInBounds(y, 'y')) py = y;
+	void movePlayerY(int y) {
+		if (playerInBounds(py+y, 'y')) py += y;
 	}
 
 	void movePlayer(int x, int y) {
 		int _x = px + x;
-		int _y = px + y;
+		int _y = py + y;
 		if (playerInBounds(_x, _y)) {
 			px = _x;
 			py = _y;

@@ -24,6 +24,8 @@ void GameManager::displayMap()
         std::cout << std::endl;
 
     }
+
+    std::cout << std::endl;
 }
 
 bool GameManager::playerInBounds(int xy, char pos) {
