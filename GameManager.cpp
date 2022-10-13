@@ -32,14 +32,13 @@ bool GameManager::playerInBounds(int xy, char pos) {
     if (pos == 'x') bounds = mapLength - 1;
     if (pos == 'y') bounds = mapHeight - 1;
 
-    if (xy < bounds) return true;
-    if (xy > 0) return true;
+    if (xy < bounds && xy > 0) return true;
 
     std::cout << "[ERROR]: Player tried to move out of bounds." << std::endl;
     return false;
 }
 
-bool GameManager::playerInBounds(int x, int y) {
+bool GameManager::playerInBounds(int &x, int &y) {
     if (y < mapHeight - 1 && x < mapLength - 1 && y > 0 && x > 0) return true;
 
     std::cout << "[ERROR]: Player tried to move out of bounds." << std::endl;

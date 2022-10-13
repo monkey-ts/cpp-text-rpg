@@ -34,7 +34,7 @@ public:
 	}
 
 	bool playerInBounds(int xy, char pos);
-	bool playerInBounds(int x, int y);
+	bool playerInBounds(int &x, int &y);
 
 	void setPlayerX(int x) {
 		if (playerInBounds(x, 'x')) px = x;
@@ -45,9 +45,11 @@ public:
 	}
 
 	void movePlayer(int x, int y) {
-		if (playerInBounds(x, y)) {
-			px = x;
-			py = y;
+		int _x = px + x;
+		int _y = px + y;
+		if (playerInBounds(_x, _y)) {
+			px = _x;
+			py = _y;
 		};
 	}
 };
