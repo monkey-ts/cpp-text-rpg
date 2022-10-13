@@ -4,6 +4,8 @@
 class GameManager {
 	int mapHeight = 10;
 	int mapLength = 20;
+	int px = 1;
+	int py = 1;
 	char mapChar;
 
 public: 
@@ -29,6 +31,24 @@ public:
 
 	inline int getMapArea() {
 		return mapLength * mapHeight;
+	}
+
+	bool playerInBounds(int xy, char pos);
+	bool playerInBounds(int x, int y);
+
+	void setPlayerX(int x) {
+		if (playerInBounds(x, 'x')) px = x;
+	}
+
+	void setPlayerY(int y) {
+		if (playerInBounds(y, 'y')) py = y;
+	}
+
+	void movePlayer(int x, int y) {
+		if (playerInBounds(x, y)) {
+			px = x;
+			py = y;
+		};
 	}
 };
 

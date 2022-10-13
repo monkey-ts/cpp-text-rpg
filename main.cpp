@@ -26,6 +26,7 @@ int main()
 
     while (true)
     {
+        GM.movePlayer(100, 5);
         GM.displayMap();
 
         break;
