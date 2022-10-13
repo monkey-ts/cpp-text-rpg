@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
+#include <tuple>
 #include "Character.h"
 #include "Weapon.h"
 #include "GameManager.h"
+
 
 int main()
 {
@@ -17,6 +19,10 @@ int main()
     std::cout << "* Type 'exit' to end the game *" << std::endl;
     std::cout << "*******************************" << std::endl;
     /* Game Start Message End */
+
+    auto enemyPos = GM.getEnemyPos();
+    auto enemy_x = std::get<0>(enemyPos);
+    auto enemy_y = std::get<1>(enemyPos);
 
     std::cout << "What is your name?\n> ";
     std::getline(std::cin, name);
