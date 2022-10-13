@@ -62,3 +62,8 @@ void Character::addWeapon()
     std::cout << std::endl;
     weapons.push_back(newWeapon);
 }
+
+// Destructor
+Character::~Character() {
+    delete ply_manager;
+}
