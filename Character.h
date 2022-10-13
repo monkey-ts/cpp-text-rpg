@@ -3,12 +3,13 @@
 
 #include <string>
 #include <vector>
+#include "Weapon.h"
 
 class Character
 {
 private:
 	std::string name;
-	std::vector<std::string> weapons;
+	std::vector<Weapon> weapons;
 	int health = 5;
 
 public:

@@ -35,7 +35,7 @@ std::string Character::getName()
 void Character::printWeapons() {
     std::cout << "You have the following items:" << std::endl;
     for (auto& weapon : weapons) {
-        std::cout << "\t" << weapon << std::endl;
+        std::cout << "\t" << weapon.getName() << std::endl;
     }
 }
 
@@ -57,6 +57,8 @@ void Character::addWeapon()
         return;
     }
 
+    Weapon newWeapon(0, 1, 0.0, weaponName);
+
     std::cout << std::endl;
-    weapons.push_back(weaponName);
+    weapons.push_back(newWeapon);
 }
