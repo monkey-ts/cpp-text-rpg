@@ -1,18 +1,19 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
 
-#include <string>
 #include <vector>
-#include "Weapon.h"
+#include <string>
 #include "PlayerManager.h"
+#include "Weapon.h"
+#include "Entity.h"
 
-class Character
+class Character : public Entity
 {
 protected:
 	std::string name;
 	std::vector<Weapon> weapons;
 	int health = 5;
-	PlayerManager  *ply_manager = new PlayerManager();
+	PlayerManager * ply_manager;
 
 public:
 	Character();

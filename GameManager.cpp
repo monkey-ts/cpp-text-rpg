@@ -81,6 +81,6 @@ std::tuple<unsigned int, unsigned int> GameManager::getEnemyPos() {
 
 void GameManager::startCombat() {
     shouldShowMap = false;
-    std::cout << "Oh shit we fightin' out here bois" << std::endl;
+    std::cout << "Oh no we fightin'" << std::endl;
 }
 

@@ -1,13 +1,21 @@
-#include "Character.h"
 #include <iostream>
+#include <string>
+#include <vector>
+#include "PlayerManager.h"
+#include "Entity.h"
+#include "Weapon.h"
+#include "Character.h"
 
 Character::Character()
 {
     name = "Unnamed";
+    ply_manager = new PlayerManager();
 }
 
 Character::Character(std::string characterName, int newHealth)
 {
+
+    ply_manager = new PlayerManager();
     if (newHealth > -1)
         health = newHealth;
     if (name == "")
