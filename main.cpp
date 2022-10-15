@@ -56,8 +56,7 @@ int main()
     Character* player = new Character("Dustin", 100);
     std::cout << std::endl;
     Map testMap;
-    testMap.addEntity(dynamic_cast<Entity*>(player));
-    testMap.draw();
+    //testMap.draw();
 
     return 0;
 }
